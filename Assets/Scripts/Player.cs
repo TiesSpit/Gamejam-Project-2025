@@ -4,10 +4,17 @@ public class Player : MonoBehaviour
 {
     private float xInput;
     private Rigidbody2D rb;
+
+    [Header("Movement deetails")]
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpForce = 25f;
 
-    [SerializeField] private bool facingRight = true;
+    [Header("Collision details")]
+    [SerializeField] private float groundCheckDistance;
+    [SerializeField] private LayerMask whatIsGround;
+    private bool isGrounded;
+
+    private bool facingRight = true;
 
     private void Awake()
     {
@@ -16,10 +23,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //Player movement
+        HandleCollision();
         HandleInput();
         HandleMovement();
-        handleFlip();
+        HandleFlip();
     }
 
     private void HandleInput()
@@ -37,20 +44,31 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        if (isGrounded)
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
-    private void handleFlip()
+    private void HandleCollision()
+    {
+        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, whatIsGround);
+    }
+
+    private void HandleFlip()
     {
         if (rb.linearVelocity.x >0 && facingRight == false)
-            flip();
+            Flip();
         else if (rb.linearVelocity.x <0 && facingRight == true) 
-            flip();
+            Flip();
     }
-    private void flip()
+    private void Flip()
     {
         transform.Rotate(0, 180, -68);
         facingRight = !facingRight;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.position + new Vector3(0, -groundCheckDistance));
     }
 
 }
