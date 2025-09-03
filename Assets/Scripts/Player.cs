@@ -2,35 +2,41 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float xInput;
-    public Rigidbody2D rb;
+    private float xInput;
+    private Rigidbody2D rb;
+    [SerializeField] private float moveSpeed = 6f;
+    [SerializeField] private float jumpForce = 20f;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void Update()
     {
+        //Player movement
+        HandleInput();
+        HandleMovement();
+
+    }
+
+    private void HandleInput()
+    {
         xInput = Input.GetAxisRaw("Horizontal");
 
-        rb.linearVelocity = new Vector2(xInput, rb.linearVelocity.y);
+        if (Input.GetKeyDown(KeyCode.Space))
+            Jump();
     }
-    //public float moveSpeed = 5f;
-    //public float jumpForce = 10f;
 
-    //public Rigidbody2D rb;
+    private void HandleMovement()
+    {
+        rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
+    }
 
-    //// Start is called once before the first execution of Update after the MonoBehaviour is created
-    //void Start()
-    //{
-    //    rb = GetComponent<Rigidbody2D>();
-    //}
+    private void Jump()
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+    }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    float moveInput = Input.GetAxis("horizontal");
-    //    rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-    //    }
-    //}
 }
