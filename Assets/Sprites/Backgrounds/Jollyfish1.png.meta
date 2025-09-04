@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 788f6b55c8392724f936bedf65b69556
+guid: a0d95b023193ec94daae1e8507530231
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1000253359322716301
-    second: Table level_0
+      213: -5772699235996346165
+    second: Jollyfish1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Table level_0
+      name: Jollyfish1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 63
+        y: 15
+        width: 354
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 377ad288ed26e12f0800000000000000
-      internalID: -1000253359322716301
+      spriteID: bc8d44341a043efa0800000000000000
+      internalID: -5772699235996346165
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Table level_0: -1000253359322716301
+      Jollyfish1_0: -5772699235996346165
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

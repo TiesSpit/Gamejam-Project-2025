@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 788f6b55c8392724f936bedf65b69556
+guid: 839b7fc7f0609ab4caca0ba1811970ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1000253359322716301
-    second: Table level_0
+      213: -190532069509238478
+    second: DeadFisg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Table level_0
+      name: DeadFisg_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 127
+        y: 175
+        width: 274
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 377ad288ed26e12f0800000000000000
-      internalID: -1000253359322716301
+      spriteID: 231f49e97181b5df0800000000000000
+      internalID: -190532069509238478
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Table level_0: -1000253359322716301
+      DeadFisg_0: -190532069509238478
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
